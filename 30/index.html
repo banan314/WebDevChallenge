@@ -3,33 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="http://maps.google.com/maps?file=api&v=2" type="text/javascript"></script>
+    <script type="text/javascript" src="js/gmaps.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <title>Zadanie 30</title>
 </head>
-<body>
-<section id="intro">
+<body onload="loadGoogleMaps()" onunload="GUnload()">
+<section id="header">
     <nav>
         <ul>
-            <li>PORTFOLIO</li>
-            <li>ABOUT</li>
-            <li>MOONSPEAK</li>
-            <li>ARTICLES</li>
-            <li>CONTACT</li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#about">MOONSPEAK</a></li>
+            <li><a href="#articles" style="font-size: 5pt;"><!--TODO: CSS it-->ARTICLES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
-    <div>
-        Non corporis adipisci quia aliquid impedit dolorum et delectus. Sunt at ea architecto ut. Harum doloremque
-        perspiciatis aperiam. Aperiam accusantium totam laudantium repudiandae quisquam sint quos.
-        Ratione voluptatem aut inventore. Repellat repudiandae aut corporis ut sit. Soluta aut nihil id sed in odit.
-        Provident rerum et enim. Quia velit doloribus voluptatem eos. Provident similique distinctio quo omnis. Fuga
-        facere sed id.
+    <div id="intro_description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dom totam laudantium repudiandae quisquam sint quos.
     </div>
 </section>
-<section>
-    View project
+<section id="some_text" class='fillWithColor'>
+    <div>
+        <div>
+            <p>AARHUS LEJERBOLIGER</p>
+            <p>Expedita qui sint reiciendis inventore eveniet. Omnis at perferendis qui aliquam omnis eos. Aut in qui
+                quaerat
+                cumque quis et tempore dolor. Quia asperiores sint ratione. Nostrum laborum sunt voluptas quia est
+                officia.
+                <br/>
+                <button class="btn View_Project Rectangle_7" onmouseover="this.className='btn View_Project Rectangle_7'" onmouseout="this.className='btn View_Project Rectangle_7'">
+                    View project
+                </button>
+            </p>
+        </div>
+    </div>
 </section>
-<section>
+<section id="portfolio">
     <div id="img_container" style="width: 100%;">
         <ul class="rects">
             <li><img src="./img/pictures/30-26.png"></li>
@@ -41,13 +53,13 @@
         </ul>
     </div>
 </section>
-<section class="fillWithColor">
-    <p>Expedita qui sint reiciendis inventore eveniet. Omnis at perferendis qui aliquam omnis eos. Aut in qui quaerat
-        cumque quis et tempore dolor. Quia asperiores sint ratione. Nostrum laborum sunt voluptas quia est officia.</p>
+<section id="the_title" class="fillWithColor">
+    <p style="font-size: 18pt;">Expedita qui sint reiciendis inventore eveniet. Omnis at perferendis qui aliquam omnis eos. Aut in qui quaerat
+    cumque quis et tempore dolor. Quia asperiores sint ratione. Nostrum laborum sunt voluptas quia est officia.</p>
 </section>
-<section>
+<section id="about">
     <img src="img/button-crosses.png">
-    <p>
+    <p class="Columns " style="font-size: 7pt;"><!--TODO: this text goes on the top, CSS it-->
         <span>MOONSPEAK</span>
         Autem qui est aut provident non aut omnis. Totam nostrum id officia dolorem vel quo. Quod quisquam sit qui
         similique et.
@@ -63,16 +75,16 @@
         similique et.
     </p>
 </section>
-<section>
+<section id="articles">
     <div><p>Excepteur sint occaecat cupidatat non proident</p>
         <p>Autem qui est aut provident non aut omnis. Totam nostrum id officia dolorem vel quo. Quod quisquam sit qui
             similique et.</p>
         <a href="#">Learn more</a>
     </div>
-    <div><p>Excepteur sint occaecat cupidatat non proident</p>
-        <p>Autem qui est aut provident non aut omnis. Totam nostrum id officia dolorem vel quo. Quod quisquam sit qui
+    <div><!--TODO: CSS it--><p style="font-size: 9pt;">Excepteur sint occaecat cupidatat non proident</p>
+        <p style="font-size: 8pt;">Autem qui est aut provident non aut omnis. Totam nostrum id officia dolorem vel quo. Quod quisquam sit qui
             similique et.</p>
-        <a href="#">Learn more</a>
+        <a href="#" style="font-size: 8pt;">Learn more</a>
     </div>
     <div><p>Excepteur sint occaecat cupidatat non proident</p>
         <p>Autem qui est aut provident non aut omnis. Totam nostrum id officia dolorem vel quo. Quod quisquam sit qui
@@ -80,20 +92,27 @@
         <a href="#">Learn more</a>
     </div>
 </section>
-<section>
-    <div>
-        <p>There are many...</p>
-        <p>Phone number</p>
-        <p>Email</p>
+<section id="contact">
+    <div style="font-size: 8pt;"><!--TODO: CSS it-->
+        <p>There are many variations of passages
+            of Lorem Ipsum available, but the majority
+            have suffered alteration in some form, by injected
+            humour, or randomised words which don't look
+            even slightly believable.</p>
+        <p><b>Phone number</b><br>
+            +40 770 123 456</p>
+        <p><b>Email</b><br>almaz@bisenbaev.com</p>
+        <div id="myMap" style="width: 700px; height: 1000px; display:inline"></div>
     </div>
-    <div>Google Maps</div>
 </section>
 <footer>
     <i class="fa fa-twitter" aria-hidden="true"></i>
     <i class="fa fa-facebook" aria-hidden="true"></i>
     <i class="fa fa-instagram" aria-hidden="true"></i>
     <i class="fa fa-youtube-play" aria-hidden="true"></i>
-    Copyright 2017
+    <span class="Copyright">
+        Copyright 2017
+    </span>
 </footer>
 </body>
 </html>

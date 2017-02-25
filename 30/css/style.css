@@ -1,5 +1,67 @@
-#intro{
-    background-image: url("../img/header_bg.png");
+body {
+    font-family: Roboto, sans-serif;
+}
+
+#header {
+    background:
+        url("../img/header_bg.png")
+        no-repeat;
+    background-size: cover;
+}
+#intro_description {
+    position: relative;
+    left: 60%;
+    top: 100px;
+    width: 30%;
+    font-size: large;
+}
+
+section#specific_project > div {
+    display: table; /*TODO: use flex instead of table+cell to align in the middle*/
+    height: 400px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 0;
+}
+section#specific_project > div > div {
+    display: table-cell;
+    text-align: center;
+    height: 40%;
+    line-height: 1em;
+    vertical-align: middle;
+    background-color: #ffffff;
+}
+button {
+    padding: 10px 30px;
+    margin-top: 10px;
+}
+button.btnhov {
+    /*border-color: #000000;*/
+}
+
+.btn {
+    left: 0px;
+    top: 0px;
+    z-index: 63;
+}
+.View_Project {
+    font-size: 18px;
+    font-family: "Roboto";
+    color: #222222;
+    text-transform: uppercase;
+    line-height: 1.333;
+    text-align: left;
+    z-index: 62;
+}
+.Rectangle_7 {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #222222;
+    background-color: rgba(41, 10, 89, 0);
+    width: 204px;
+    height: 58px;
+    z-index: 61;
 }
 
 nav ul {
@@ -13,31 +75,52 @@ nav ul li {
     display: inline;
 }
 
-.rects {
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    max-width: 1155px;
-    display: block;
-    box-sizing: border-box;
+#img_container {
+    background-color: #020202;
 }
 
-.rects li img {
-    max-width: 100%;
-    height: auto;
-    width: auto;
+.rects {
+    list-style-type: none;
+    max-height: 1000px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.rects li {
     position: relative;
-    flex-shrink: initial;
-    flex-basis: 33.3%;
+    flex: 0 1 33.3%;
     overflow: hidden;
     box-sizing: border-box;
+    margin: auto;
 }
 
 section {
-    min-height: 100px;
+    min-height: 600px;
 }
 
-section.fillWithColor {
+section#the_title {
+    /*text-align: center;
+    vertical-align: middle;*/
+    position: relative;
+}
+section#the_title > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fillWithColor {
     background-color: #EFEEE9;
+}
+
+.Copyright {
+    font-size: 20px;
+    font-family: "Roboto";
+    color: #353535;
+    line-height: 1.4;
+    text-align: left;
+    z-index: 5;
 }
