@@ -1,0 +1,1 @@
+![design](../tasks/30 - aktualne/30-0.png)
