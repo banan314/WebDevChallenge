@@ -11,11 +11,17 @@ body {
         url("../img/header_bg.png")
         no-repeat;
     background-size: cover;
+    height: 600px;
 }
 .headerSection {
     font-size: 5pt;
 }
 
+nav {
+    background-color: #ffffff;
+    opacity: 0.3;
+    height: 100px;
+}
 nav a {
     text-decoration: none;
     vertical-align: middle;
@@ -29,34 +35,45 @@ nav a:hover {
 
 #intro_description {
     position: relative;
-    left: 60%;
-    top: 100px;
-    width: 30%;
+    left: 50%;
+    top: 60%;
+    width: 40%;
     font-size: large;
 }
 
-section#specific_project > div {
-    display: table; /*TODO: use flex instead of table+cell to align in the middle*/
+section#some_text > div {
     height: 400px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 100px 0;
+
+    position: relative;
 }
-section#specific_project > div > div {
-    display: table-cell;
-    text-align: center;
-    height: 40%;
+section#some_text > div > div {
     line-height: 1em;
-    vertical-align: middle;
     background-color: #ffffff;
+
+    padding: 5% 10%;
+
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section#some_text p {
+    text-align: center;
+}
+section#some_text p.textTitle {
+    font-size: 25px;
+}
+section#some_text p.mainText {
+    text-align: left !important;
+    display: block;
 }
 button {
     padding: 10px 30px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 button.btnhov {
-    /*border-color: #000000;*/
+    filter: invert(40%);
 }
 
 .btn {
@@ -115,20 +132,43 @@ section {
     min-height: 400px;
 }
 
+
 section#the_title {
     /*text-align: center;
     vertical-align: middle;*/
     position: relative;
+}/*TODO: use these classes somewhere*/
+.centerContainer {
+    position: relative;
 }
-section#the_title > p {
+.centeredContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section#the_title > article {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.fillWithColor {
+.amazingTextBlock {
     background-color: #EFEEE9;
+}
+
+section#contact {
+    background-color: #363636;
+    color: #ffffff;
+}
+section#contact >div {
+    padding-left: 15px;
+}
+#map {
+    height: 400px;
+    min-width: 300px;
+    float: right
 }
 
 .Copyright {
@@ -145,4 +185,7 @@ footer>div>p:first-child {
 }
 footer>div>p:nth-child(2) {
     float: right;
+}
+footer a {
+    color: #000000;
 }
