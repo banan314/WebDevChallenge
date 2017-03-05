@@ -2,45 +2,6 @@ body {
     font-family: Roboto, sans-serif;
 }
 
-.theName {
-    letter-spacing: 4px;
-}
-
-#header {
-    background:
-        url("../img/header_bg.png")
-        no-repeat;
-    background-size: cover;
-    height: 600px;
-}
-.headerSection {
-    font-size: 5pt;
-}
-
-nav {
-    background-color: #ffffff;
-    opacity: 0.3;
-    height: 100px;
-}
-nav a {
-    text-decoration: none;
-    vertical-align: middle;
-    color: #020202;
-    margin: auto 15px;
-}
-nav a:hover {
-    color: #e6bd55;
-    transition-delay: 0.1s;
-}
-
-#intro_description {
-    position: relative;
-    left: 50%;
-    top: 60%;
-    width: 40%;
-    font-size: large;
-}
-
 section#some_text > div {
     height: 400px;
 

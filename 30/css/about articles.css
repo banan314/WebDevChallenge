@@ -6,6 +6,13 @@
     background-color: #ffffff;
 }
 
+.theName {
+    letter-spacing: 4px;
+}
+.Columns {
+    float: left;
+}
+
 .column_title {
     font-size: 18px;
     font-family: "Roboto";
@@ -37,12 +44,24 @@
     height: 426px;
 }
 
-#about.div {
-    width: 45%;
+section#about {
+    /*height: 600px;*/
+    min-height: unset;
 }
+.clearfix {
+    overflow: hidden;
+}
+#about > img {
+    margin: auto 15px auto auto;
+    float: left;
+    width: 50%;
+    overflow: hidden;
 
+    opacity: 0.85;
+}
 #aboutWrapper {
-    vertical-align: middle;
+    padding-left: 10px;
+    margin: auto 15px
 }
 
 section#articles {
