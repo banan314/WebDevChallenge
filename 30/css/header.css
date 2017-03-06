@@ -13,6 +13,17 @@ nav > div {
     top: 40%;
 }
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
 nav {
     background-color: #ffffff;
     opacity: 0.85;
@@ -28,7 +39,10 @@ nav {
 nav.smaller {
     height: 30px;
 }
-nav.smaller > div { top: 30%;}
+
+nav.smaller > div {
+    top: 30%;
+}
 
 nav a {
     text-decoration: none;
@@ -47,7 +61,7 @@ nav a:hover {
 #intro_description {
     position: relative;
     left: 50%;
-    top: 60%;
+    top: 70%;
     width: 40%;
     font-size: large;
 }

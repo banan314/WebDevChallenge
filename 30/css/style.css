@@ -7,6 +7,7 @@ section#some_text > div {
 
     position: relative;
 }
+
 section#some_text > div > div {
     line-height: 1em;
     background-color: #ffffff;
@@ -19,20 +20,25 @@ section#some_text > div > div {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 section#some_text p {
     text-align: center;
 }
+
 section#some_text p.textTitle {
     font-size: 25px;
 }
+
 section#some_text p.mainText {
     text-align: left !important;
     display: block;
 }
+
 button {
     padding: 10px 30px;
     margin-top: 40px;
 }
+
 button.btnhov {
     filter: invert(40%);
 }
@@ -40,6 +46,7 @@ button.btnhov {
 .btn {
 
 }
+
 .View_Project {
     font-size: 18px;
     font-family: "Roboto";
@@ -49,23 +56,13 @@ button.btnhov {
     text-align: left;
     z-index: 62;
 }
+
 .Rectangle_7 {
     border: 2px solid #222222;
     background-color: rgba(41, 10, 89, 0);
     width: 204px;
     height: 58px;
     z-index: 61;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
 }
 
 #img_container {
@@ -77,6 +74,8 @@ nav ul li {
     max-height: 1000px;
 
     display: flex;
+    align-items: stretch;
+    align-content: stretch;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -87,27 +86,42 @@ nav ul li {
     overflow: hidden;
     box-sizing: border-box;
     margin: auto;
+
+    color: #ffffff;
+}
+
+.txtOverImg {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+
+    font-size: x-large;
+
+    display: none;
 }
 
 section {
     min-height: 400px;
 }
 
-
 section#the_title {
     /*text-align: center;
     vertical-align: middle;*/
     position: relative;
-}/*TODO: use these classes somewhere*/
+}
+
+/*TODO: use these classes somewhere*/
 .centerContainer {
     position: relative;
 }
+
 .centeredContent {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 section#the_title > article {
     position: absolute;
     top: 50%;
@@ -123,13 +137,20 @@ section#contact {
     background-color: #363636;
     color: #ffffff;
 }
-section#contact >div {
+
+#contactInformation {
     padding-left: 15px;
+
+    font-size: larger;
+    float: left;
+    width: 50%
 }
+
 #map {
     height: 400px;
-    min-width: 300px;
-    float: right
+    min-width: 500px;
+    float: right;
+    margin-right: 50px
 }
 
 .Copyright {
@@ -141,12 +162,14 @@ section#contact >div {
     z-index: 5;
 }
 
-footer>div>p:first-child {
+footer > div > p:first-child {
     float: left;
 }
-footer>div>p:nth-child(2) {
+
+footer > div > p:nth-child(2) {
     float: right;
 }
+
 footer a {
     color: #000000;
 }
