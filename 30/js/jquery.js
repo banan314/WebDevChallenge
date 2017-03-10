@@ -4,13 +4,26 @@
 
 const fadeThreshold = 0.25;
 $(document).ready(function () {
-    /*TODO: when cursor hovers over link, the image is blinking and never stops*/
-    $(".rects img").mouseenter(function () {
-        $(this).fadeTo('def', fadeThreshold);
-        $(this).siblings().show();
+    const siblingTagName = 'span';
+
+    $(".rects img").mouseover(function (e) {
+        if (!e) var e = window.event;
+        var relTarg = e.relatedTarget || e.fromElement;
+
+        /*TODO: can I make it more flexible somehow (if I change span tag name sometime)?*/
+        if (null != relTarg && relTarg.tagName.toLowerCase() != siblingTagName) {
+            $(this).fadeTo('def', fadeThreshold);
+            $(this).siblings().show();
+        }
     })
-    .mouseleave(function () {
-        $(this).fadeTo('def', 1.0);
-        $(this).siblings().hide();
-    });
+        .mouseout(function (e) {
+            if (!e) var e = window.event;
+            var relTarg = e.relatedTarget || e.toElement;
+
+            /*TODO: can I make it more flexible somehow?*/
+            if (null != relTarg && relTarg.tagName.toLowerCase() != siblingTagName) {
+                $(this).fadeTo('def', 1.0);
+                $(this).siblings().hide();
+            }
+        });
 });

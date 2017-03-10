@@ -5,7 +5,11 @@ header {
 }
 
 .headerSection {
-    font-size: 5pt;
+    font-size: 10px;
+}
+
+.theName {
+    letter-spacing: 4px;
 }
 
 nav > div {

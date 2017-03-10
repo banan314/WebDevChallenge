@@ -96,6 +96,7 @@ button.btnhov {
     top: 50%;
 
     font-size: x-large;
+    text-transform: uppercase;
 
     display: none;
 }
@@ -143,15 +144,24 @@ section#contact {
 
     font-size: larger;
     float: left;
-    width: 50%
+    width: 40%
 }
-
 #map {
     height: 400px;
-    min-width: 500px;
+    min-width: 50%;
     float: right;
-    margin-right: 50px
+    margin-right: 50px;
 }
+
+@media all and (max-width: 690px) {
+    #map {
+    display: none;
+}
+    #contactInformation {
+        width: 95%;
+    }
+}
+
 
 .Copyright {
     font-size: 20px;
